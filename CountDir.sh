@@ -2,6 +2,12 @@ if [[ $# -ne 1 ]]; then
 	echo "Can not have more than one argument!"
 	exit 1
 fi
+
+if [[ $# -eq 0 ]]; then
+	echo "Must have one argument!"
+	exit 1
+fi
+
 if [[ -d "$1" ]]; then
 	echo "Directory: $1"
 else
