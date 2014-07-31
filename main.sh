@@ -19,7 +19,7 @@ while [[ true ]]; do
 		3) bash student.sh;;
 		0) clear
 		echo "Bye"
-		sleep 1
+		
 		while [[ true ]]; do
 			exit
 		done;;
