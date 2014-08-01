@@ -23,6 +23,37 @@ teacher_exits()
 	fi
 }
 
+listFiles()
+{
+	menu=$(echo $tid"_"$lid"_files")
+	if [[ -d $(echo $tid"_"$lid"_files") ]]; then
+		#statements
+		echo "ok">/dev/null
+	else
+		mkdir  $(echo $tid"_"$lid"_files")
+	fi
+	echo "HomewordID_StudentID:"
+	dir $menu
+	echo "Press to continue"
+	read nothing
+}
+
+viewFile()
+{
+	menu=$(echo $tid"_"$lid"_files")
+	if [[ -d $(echo $tid"_"$lid"_files") ]]; then
+		#statements
+		echo "ok">/dev/null
+	else
+		mkdir  $(echo $tid"_"$lid"_files")
+	fi
+	echo "Input HomewordID_StudentID to view"
+	echo "example : 1_2"
+	read input
+	cat $menu"/"$input
+	echo "Press to continue"
+	read nothing
+}
 
 addHomework()
 {
@@ -321,6 +352,8 @@ while [[ true ]]; do
 		5) addHomework;;
 		6) delHomework;;
 		7) listHomework;;
+		8) listFiles;;
+		9) viewFile;;
 		0) clear
 		
 		sleep 1
