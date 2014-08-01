@@ -1,0 +1,29 @@
+这是一个作业管理系统
+main.sh是主程序，根据需求分别调用其他三个子程序，来进行操作
+
+teacher.sh有9个功能，分别为
+
+1 -- modify lecture info 查看修改课程信息
+2 -- add student 添加学生
+3 -- delete student 删除学生
+4 -- list all students 列出所有学生
+5 -- add homework 添加作业
+6 -- delete homework 删除作业
+7 -- list homework 列出所有作业
+8 -- list homework uploaded 列出学生提交的作业
+9 -- view a student's homework 查看一份作业
+
+admin.sh 9个功能
+1 -- create a teacher account 添加教师
+2 -- modify a teacher account 修改教师（未完成） 可用1+3实现
+3 -- delete a teacher account 删除教师
+4 -- list all teacher accounts 列出教师
+5 -- add a lecture 添加课程
+6 -- delete a lecture 删除课程
+7 -- list all lectures 列出课程
+8 -- bind teacher and lecture 绑定老师和课程
+9 -- unbind teacher and lecture 解除老师和课程的绑定
+
+student.sh 2个功能
+1 -- list homework 列出作业
+2 -- edit homework 编辑提交一份作业

@@ -1,5 +1,7 @@
 #在教师添加学生账户后，学生就可以登录系统，并完成作业和实验。
 #基本功能：新建、编辑作业或实验功能；查询作业或实验完成情况。
+
+#function to judge whether the homework entry exits
 homework_exits()
 {
 	filename=$(echo $tid"_"$lid"_homework")
@@ -11,6 +13,7 @@ homework_exits()
 	fi
 }
 
+#function to judge whether the lecture entry exits
 lecture_exits()
 {
 	echo "$lid"
@@ -21,6 +24,7 @@ lecture_exits()
 	fi
 }
 
+#function to judge whether the teacher exits
 teacher_exits()
 {
 	echo "$tid"
@@ -31,6 +35,7 @@ teacher_exits()
 	fi
 }
 
+#function to judge whether the student exits
 student_exits()
 {
 	filename=$(echo $tid"_"$lid"_students")
@@ -42,8 +47,10 @@ student_exits()
 	fi
 }
 
+#list all home work
 listHomework()
 {
+	#create dir if not exists
 	if [[ -d $(echo $tid"_"$lid"_files") ]]; then
 		#statements
 		echo "ok">/dev/null
@@ -52,6 +59,8 @@ listHomework()
 	fi
 
 	filename=$(echo $tid"_"$lid"_homework")
+
+	#create file if not exists
 
 	if [[ -e $filename ]]; then
 		echo "ok">/dev/null
@@ -75,6 +84,7 @@ listHomework()
 	done
 }
 
+#view and edit your homework
 editHomework()
 {
 	echo "Input homework ID"
